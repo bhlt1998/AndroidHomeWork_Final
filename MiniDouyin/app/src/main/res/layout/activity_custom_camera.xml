@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <SurfaceView
+        android:id="@+id/img"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+    <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:layout_marginBottom="20dp"-->
+        <!--android:gravity="center">-->
+
+        <!--&lt;!&ndash;<Button&ndash;&gt;-->
+            <!--&lt;!&ndash;android:id="@+id/btn_picture"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_width="90dp"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:text="picture" />&ndash;&gt;-->
+
+        <!--&lt;!&ndash;<Button&ndash;&gt;-->
+        <!--&lt;!&ndash;android:id="@+id/btn_record"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_width="90dp"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:text="record" />&ndash;&gt;-->
+
+        <!--&lt;!&ndash;<Button&ndash;&gt;-->
+            <!--&lt;!&ndash;android:id="@+id/btn_facing"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_width="90dp"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:text="facing" />&ndash;&gt;-->
+
+        <!--&lt;!&ndash;<Button&ndash;&gt;-->
+            <!--&lt;!&ndash;android:id="@+id/btn_zoom"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_width="90dp"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:text="zoom" />&ndash;&gt;-->
+
+    <!--</LinearLayout>-->
+
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageButton
+            android:id="@+id/imageButton_yes"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginBottom="8dp"
+            android:background="@color/no_color"
+            app:layout_constraintBottom_toTopOf="@+id/btn_record"
+            app:layout_constraintStart_toEndOf="@+id/btn_record"
+            app:srcCompat="@drawable/check_circle" />
+
+        <ImageButton
+            android:id="@+id/imageButton_no"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginEnd="12dp"
+            android:background="@color/no_color"
+            app:layout_constraintBottom_toBottomOf="@+id/imageButton_yes"
+            app:layout_constraintEnd_toStartOf="@+id/btn_record"
+            app:srcCompat="@drawable/cancel" />
+
+        <ImageButton
+            android:id="@+id/btn_record"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginBottom="70dp"
+            android:alpha="0.5"
+            android:background="@color/no_color"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/brightness" />
+
+        <ImageButton
+            android:id="@+id/btn_facing"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:alpha="0.5"
+            android:background="@color/no_color"
+            app:layout_constraintBottom_toBottomOf="@+id/btn_record"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btn_record"
+            app:srcCompat="@drawable/switch_camera" />
+
+        <ImageButton
+            android:id="@+id/imageButton_exitCamera"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:alpha="0.5"
+            android:background="@color/no_color"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/clear" />
+
+        <ImageView
+            android:id="@+id/iv_recording"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="36dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.423"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/redcircle"
+            android:alpha="0.8"/>
+
+        <TextView
+            android:id="@+id/tv_recording"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="3dp"
+            android:layout_marginTop="35dp"
+            android:text="录制中"
+            android:textSize="19sp"
+            android:alpha="0.8"
+            app:layout_constraintStart_toEndOf="@+id/iv_recording"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lottie_loading"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:lottie_fileName="222-trail-loading.json"
+            app:lottie_loop="true"
+            app:lottie_autoPlay="false"
+            android:visibility="invisible"/>
+
+        <TextView
+            android:id="@+id/tv_ask"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="直接上传？"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/imageButton_yes"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </android.support.constraint.ConstraintLayout>
+
+</RelativeLayout>

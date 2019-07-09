@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UploadActivity"
+    android:background="@color/dark_background">
+
+    <TextView
+        android:id="@+id/tv_choose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="选择封面图"
+        android:textColor="@color/name_white"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton_addPhoto" />
+    <ImageButton
+        android:id="@+id/imageButton_addPhoto"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginBottom="100dp"
+        android:background="@color/no_color"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/add_photo" />
+
+    <ImageView
+        android:id="@+id/uncheck_img"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="12dp"
+        app:layout_constraintEnd_toStartOf="@+id/textView_chooseImg"
+        app:layout_constraintTop_toTopOf="@+id/textView_chooseImg"
+        app:srcCompat="@drawable/check_box_blank" />
+    <ImageView
+        android:id="@+id/check_img"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:visibility="gone"
+        android:layout_marginEnd="12dp"
+        app:layout_constraintEnd_toStartOf="@+id/textView_chooseImg"
+        app:layout_constraintTop_toTopOf="@+id/textView_chooseImg"
+        app:srcCompat="@drawable/check_box"
+        />
+
+    <TextView
+        android:id="@+id/textView_chooseImg"
+        android:layout_width="wrap_content"
+
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="84dp"
+        android:layout_marginEnd="8dp"
+        android:text="选择封面图"
+        android:textColor="@color/name_white"
+        android:textSize="27sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.546"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/uncheck_vid"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="12dp"
+        app:layout_constraintEnd_toStartOf="@+id/textView_chooseVid"
+        app:layout_constraintTop_toTopOf="@+id/textView_chooseVid"
+        app:srcCompat="@drawable/check_box_blank" />
+    <ImageView
+        android:id="@+id/check_vid"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="12dp"
+        app:layout_constraintEnd_toStartOf="@+id/textView_chooseVid"
+        app:layout_constraintTop_toTopOf="@+id/textView_chooseVid"
+        android:visibility="gone"
+        app:srcCompat="@drawable/check_box"/>
+
+    <TextView
+        android:id="@+id/textView_chooseVid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="28dp"
+        android:text="选择视频"
+        android:textColor="@color/name_white"
+        android:textSize="27sp"
+        app:layout_constraintStart_toStartOf="@+id/textView_chooseImg"
+        app:layout_constraintTop_toBottomOf="@+id/textView_chooseImg" />
+
+    <ImageButton
+        android:id="@+id/exit_upload"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/no_color"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/clear_white"
+        android:alpha="0.5"/>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/loading_upload"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:lottie_autoPlay="false"
+        app:lottie_fileName="222-trail-loading.json"
+        app:lottie_loop="true" />
+</android.support.constraint.ConstraintLayout>

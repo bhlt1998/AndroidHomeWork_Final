@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">迷你抖音</string>
+    <string name="select_an_image">选择封面图</string>
+    <string name="select_a_video">选择视频</string>
+    <string name="post_it">开始上传</string>
+    <string name="success_try_refresh">上传成功</string>
+</resources>
